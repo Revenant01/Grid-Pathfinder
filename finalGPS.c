@@ -1,5 +1,5 @@
 /*
- * finalGPS.c — Simple console GPS pathfinder
+ * finalGPS.c — Grid Pathfinder
  *
  * Generates a random 10x10 grid where each cell is either 0 (footpath) or
  * 1 (road).  The user selects a travel mode (walking=0 / driving=1), then
