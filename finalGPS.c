@@ -1,3 +1,28 @@
+/*
+ * finalGPS.c — Simple console GPS pathfinder
+ *
+ * Generates a random 10x10 grid where each cell is either 0 (footpath) or
+ * 1 (road).  The user selects a travel mode (walking=0 / driving=1), then
+ * enters departure and destination coordinates.  A recursive depth-first
+ * search with backtracking discovers every valid route that stays on cells
+ * matching the chosen mode.  The shortest route is printed as a list of
+ * (row,col) waypoints followed by cardinal-direction instructions.
+ *
+ * Data structures
+ * ---------------
+ *   Pair        – (x,y) grid coordinate
+ *   Node        – singly-linked list node wrapping a Pair
+ *   LinkedList  – linked list with head+last pointers; one instance = one route
+ *   ans[]       – global array collecting all complete routes (max SIZE=500)
+ *
+ * Build
+ * -----
+ *   gcc finalGPS.c -o gps          (requires STD_TYPES.h in the same directory)
+ *
+ * Note: system("cls") is Windows-specific; replace with system("clear") on
+ * Linux/macOS or remove the call entirely.
+ */
+
 #include "stdio.h"
 #include "STD_TYPES.h"
 #include "stdlib.h"
