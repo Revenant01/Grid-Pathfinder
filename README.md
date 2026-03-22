@@ -1,4 +1,5 @@
 # Grid Pathfinder
+> Finds the shortest path on a random grid — walking or driving.
 
 A console-based grid pathfinding program written in C. It models a 10×10 grid map, lets the user choose a travel mode (walking or driving), enter departure and destination coordinates, and then finds all valid routes using depth-first search — reporting the shortest path with step-by-step directions.
 
